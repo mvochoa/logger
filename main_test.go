@@ -11,7 +11,7 @@ import (
 )
 
 func TestError(t *testing.T) {
-	file := directory + "/error.log"
+	file := directory + "/error_" + time.Now().Format("2006_01_02") + ".log"
 	if _, err := os.Stat(file); !os.IsNotExist(err) {
 		os.Remove(file)
 	}

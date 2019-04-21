@@ -25,6 +25,7 @@ func print(msg string) {
 }
 
 func save(file, data string) {
+	file += "_" + time.Now().Format("2006_01_02")
 	f, err := os.OpenFile(directory+"/"+file+".log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Fatal(err)
