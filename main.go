@@ -19,9 +19,9 @@ func init() {
 }
 
 func print(msg string) {
-	fmt.Print("\n\n========\n\n")
+	fmt.Print("\n========\n\n")
 	fmt.Printf(msg)
-	fmt.Print("\n\n========\n\n")
+	fmt.Print("\n========\n\n")
 }
 
 func save(file, data string) {
