@@ -47,3 +47,12 @@ func Error(tag string, err error) {
 		save("error", msg)
 	}
 }
+
+// ErrorFatal the errors are recorded in the log/error.log file and exit
+func ErrorFatal(tag string, err error) {
+	if err != nil {
+		tag = "[FATAL] " + tag
+		Error(tag, err)
+		os.Exit(1)
+	}
+}
