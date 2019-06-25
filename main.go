@@ -48,8 +48,8 @@ func Error(tag string, err error) {
 	}
 }
 
-// ErrorFatal the errors are recorded in the log/error.log file and exit
-func ErrorFatal(tag string, err error) {
+// Fatal the errors are recorded in the log/error.log file and exit
+func Fatal(tag string, err error) {
 	if err != nil {
 		tag = "[FATAL] " + tag
 		Error(tag, err)
